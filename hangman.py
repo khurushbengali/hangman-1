@@ -165,7 +165,10 @@ def display(keyword, selected, lives, score, time):
     text_pos = (100,50)
     quetotal="Que: "+str(que)
     text = font.render(quetotal ,1, white)
-    screen.blit(text,text_pos)
+    #screen.blit(text,text_pos)
+    life = "Lives: "+str(lives)
+    text2 = font.render(life,1,white )
+    screen.blit(text2, (900, 600))
     pygame.display.update()
     return correct_letters
         
