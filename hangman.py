@@ -136,7 +136,7 @@ def game_over(score):
     text = font.render(string, True, white)
     screen.blit(text, (width/2-150, height/2))
     with open('score.txt', 'a') as fout:
-        fout.write(score)
+        fout.write(str(score))
         fout.write("\n")
     pygame.display.update()
     while True:
@@ -189,8 +189,7 @@ def play(score, start_ticks):
     flag=0
     i = 1 
     hint1="Hint: "+wor.get(keyword)
-    queno = que
-    print(hint1)   
+   
     while True:
         pic_sel="Pictures"+str(i)+".jpg"
         I = pygame.image.load(os.path.join("./Movie/"+pic_sel))
@@ -198,7 +197,7 @@ def play(score, start_ticks):
         elapsed_time = pygame.time.get_ticks() - start_ticks
         rem_time = (10*60*1000 - elapsed_time)/1000
         #screen.fill(black)
-        rem_time = 0
+        #rem_time = 0
         if rem_time <= 0:
             game_over(score)
         for event in pygame.event.get():

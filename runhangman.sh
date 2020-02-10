@@ -1,9 +1,9 @@
 #!/bin/bash
 echo "Welcome to the First round of Mazecoders - Codefiesta" 
-cat << "logo.txt" 
-echo "Please Enter Name of 1 member"
+cat "logo.txt" 
+echo "Please Enter Name of 1st member"
 read name
-echo "Please Enter Number of that Member" 
+echo "Please Enter the Number of that member" 
 read number
 cd hangman
 echo name >> score.txt
