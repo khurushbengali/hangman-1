@@ -128,11 +128,16 @@ taken = []
 
 def game_over(score):
     #screen.fill(black)
+
     text = font.render("Game Over!", True, white)
     screen.blit(text, (width/2-150, height/2-50))
     string = "Score : " + str(score)
+
     text = font.render(string, True, white)
     screen.blit(text, (width/2-150, height/2))
+    with open('score.txt', 'a') as fout:
+        fout.write(score)
+        fout.write("\n")
     pygame.display.update()
     while True:
         pygame.time.delay(1000)
@@ -193,6 +198,7 @@ def play(score, start_ticks):
         elapsed_time = pygame.time.get_ticks() - start_ticks
         rem_time = (10*60*1000 - elapsed_time)/1000
         #screen.fill(black)
+        rem_time = 0
         if rem_time <= 0:
             game_over(score)
         for event in pygame.event.get():
