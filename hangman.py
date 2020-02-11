@@ -39,7 +39,7 @@ wor = {
 "unsigned":"non-negative",
 "const":"cannot be altered",
 "for":"control flow",
-"signed":"",
+"signed":"both +ve and -ve",
 "void":"return type",
 "continue":"loop control",
 "goto":"loop control",
@@ -83,7 +83,7 @@ wor = {
 "short":"data type",
 "static":"global variable",
 "super":"parent of class",
-"synchronized":"",
+"synchronized":"multiple thread execution at once",
 "this":"pointer",
 "throw":"exception handling",
 "throws":"exception handling",
@@ -121,7 +121,7 @@ wor = {
 "with":"wrap execution of a block",
 "except":"exception handling",
 "lambda":"inline function without &nbsp; return statement",
-"yield":"return dictionary"}
+"yield":"return dictionary",}
 print(len(wor))
 taken = []
 
