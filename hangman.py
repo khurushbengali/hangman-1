@@ -168,9 +168,6 @@ def display(keyword, selected, lives, score, time):
     text_pos = (580, 50)
     screen.blit(text, text_pos)
     text_pos = (100,50)
-    quetotal="Que: "+str(que)
-    text = font.render(quetotal ,1, white)
-    #screen.blit(text,text_pos)
     life = "Lives: "+str(lives)
     text2 = font.render(life,1,white )
     screen.blit(text2, (900, 600))
@@ -236,7 +233,6 @@ def play(score, start_ticks):
 
 score = 0
 time = 0
-que = 1
 start_ticks = pygame.time.get_ticks()
 while True:
     score = play(score, start_ticks)
